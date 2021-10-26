@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project 1: Photo Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script type="text/javascript" src="js/image-gallery.js"> </script>
+  <h2>National Park Photo Gallery</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="imgs/Yellowstone.jpg" alt="Grand Prismatic hot spring at Yellowstone National Park" id="Grand" onclick="myFunction(this), mark(this);" onmouseover="caption(this)" onmouseout="nocaption(this)">
+    <p id="caption"> Grand Prismatic hot spring at Yellowstone National Park</p>
+  </div>
+  <div class="column">
+    <img src="imgs/Teton.jpg" alt="View of the peak at Grand Teton National Park" id="Rainier" onclick="myFunction(this), mark(this);" onmouseover="caption2(this)" onmouseout="nocaption2(this)">
+  <p id="caption2"> View of the peak at Grand Teton National Park </p>
+  </div>
+  <div class="column">
+    <img src="imgs/Rainier.jpg" alt="Reflection Lake at Mount Rainier National Park" id="Teton" onclick="myFunction(this), mark(this);" onmouseover="caption3(this)" onmouseout="nocaption3(this)">
+    <p id="caption3"> Reflection Lake at Mount Rainier National Park" </p>
+</div>
+  <div class="column">
+    <img src="imgs/Yosemite.jpg" alt="Yosemite Falls at Yosemite National Park" id="Yellowstone" onclick="myFunction(this), mark(this);" onmouseover="caption4(this)" onmouseout="nocaption4(this)">
+    <p id="caption4"> Yosemite Falls at Yosemite National Park </p>
+  </div>
+  <div class="column">
+    <img src="imgs/Grand.jpg" alt="North Rim view at Grand Canyon National Park" id="Yosemite" onclick="myFunction(this), mark(this);" onmouseover="caption5(this)" onmouseout="nocaption5(this)">
+  <p id="caption5"> North Rim view at Grand Canyon National Park </p>
+    </div>
+</div>
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+</body>
+</html>
