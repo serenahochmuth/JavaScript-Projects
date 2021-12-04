@@ -3,66 +3,57 @@
 * {
   box-sizing: border-box;
 }
-
-h2 {
-  text-align: center;
-  color: white;
-}
-body {
-  margin: 0;
-  padding: 25px;
-  font-family: Arial;
-  background-color: #322F2F;
-}
-img {
-    float: left;
-    width:  auto;
-    height: auto;
-    object-fit: cover;
-    width: 100%;
+input[type=text], select, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-
-p {
-    color: #322F2F;
-  }
-#caption {
-  color: #322F2F;
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
 }
 
-#caption2 {
-  color: #322F2F;
+input[type=submit] {
+  border: 1px solid black;
+  color: black;
+  padding: 12px 20px;
+  cursor: pointer;
 }
 
-#caption3 {
-  color: #322F2F;
+input[type=submit]:hover {
+  background-color: gray;
 }
 
-#caption4 {
-  color: #322F2F;
+input[type=reset] {
+  border: 1px solid black;
+  color: black;
+  padding: 12px 20px;
+  cursor: pointer;
 }
 
-#caption5 {
-  color: #322F2F;
+input[type=reset]:hover {
+  background-color: gray;
 }
 
-#border {
-  border: #322F2F;
+.container {
+  width: 50%;
+  border: 12px solid black;
+  border-width: medium;
+  padding: 10px;
 }
-/* The grid: five equal columns that floats next to each other */
-.column {
+
+.col-25 {
   float: left;
-  width: 20%;
-}
-.containers {
-  float: inherit;
-  width: 100%;
+  width: 25%;
+  margin-top: 6px;
 }
 
-.image {
-  display: block;
-   width: 100%;
-   height: auto;
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
 }
 
 /* Clear floats after the columns */
@@ -72,26 +63,10 @@ p {
   clear: both;
 }
 
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
-/* Expanding image text */
-#imgtext {
-  position: static;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-</style>
